@@ -245,7 +245,7 @@ var JoiForm = React.createClass({
             },
         };
 
-        if(this.state.errors && this.state.errors[name]) {
+        //if(this.state.errors && this.state.errors[name]) {
             Joi.validate(value, this.state.schema[name], (err, value) => {
                 if(err) {
                     var formErrors= {};
@@ -272,13 +272,13 @@ var JoiForm = React.createClass({
                     });
                 }
             });
-        } else {
-            this.setState(newState, () => {
-                if(this.props.onChange) {
-                    this.props.onChange(e, newState.values);
-                }
-            });
-        }
+        //} else {
+        //    this.setState(newState, () => {
+        //        if(this.props.onChange) {
+        //            this.props.onChange(e, newState.values);
+        //        }
+        //    });
+        //}
 
     },
     __onFocus(e) {
